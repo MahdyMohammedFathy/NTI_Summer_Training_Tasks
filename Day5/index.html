@@ -5,92 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarketPro 2</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="MarketPro 2: Data-driven strategies for digital marketing success.">
 </head>
 <body>
 
     <header class="header">
         <div class="header-container">
-            <div class="logo">MarketPro</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#data">Data</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#home" class="logo" aria-label="MarketPro Home">MarketPro</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" aria-label="Navigate to Home">Home</a></li>
+                    <li><a href="#features" aria-label="Navigate to Features">Features</a></li>
+                    <li><a href="#data" aria-label="Navigate to Data">Data</a></li>
+                    <li><a href="#contact" aria-label="Navigate to Contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <div class="hero-section">
-    <h1>Elevate Your Digital Marketing</h1>
-    <p>Data-driven strategies that deliver real results and <br>accelerate your business growth in the digital landscape.</p>
-    <a href="#start" class="cta-button">Get Started Now</a>
-    </div>
-    <div class="features-section">
-    <h2>Our Core Features</h2>
-    <div class="features-container">
-        <div class="feature-item">
-            <img src="Media/seo.jfif" alt="SEO Optimization">
-            <h3>SEO Optimization</h3>
-            <p>Improve your search rankings with our comprehensive SEO strategies tailored to your business.</p>
-            <a href="#learn-seo" class="learn-more">Learn More</a>
-        </div>
-        <div class="feature-item">
-            <img src="Media/pay.png" alt="PPC Campaigns">
-            <h3>PPC Campaigns</h3>
-            <p>Launch targeted ad campaigns that drive qualified traffic and maximize your ROI.</p>
-            <a href="#learn-ppc" class="learn-more">Learn More</a>
-        </div>
-        <div class="feature-item">
-            <img src="Media/content.jfif" alt="Content Strategy">
-            <h3>Content Strategy</h3>
-            <p>Engage your audience with valuable content that builds trust and drives conversions.</p>
-            <a href="#learn-content" class="learn-more">Learn More</a>
-        </div>
-    </div>
-    </div>
-    <div class="metrics-section">
-    <h2>Performance Metrics</h2>
-    <h3>Recent Campaign Results</h3>
-    <table class="metrics-table">
-        <thead>
-            <tr>
-                <th>Campaign</th>
-                <th>Impressions</th>
-                <th>Clicks</th>
-                <th>CTR</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Summer Sale</td>
-                <td>245,890</td>
-                <td>12,450</td>
-                <td>5.06%</td>
-                <td><span class="status active">Active</span></td>
-            </tr>
-            <tr>
-                <td>Product Launch</td>
-                <td>189,340</td>
-                <td>9,870</td>
-                <td>5.21%</td>
-                <td><span class="status completed">Completed</span></td>
-            </tr>
-            <tr>
-                <td>Holiday Special</td>
-                <td>320,560</td>
-                <td>18,230</td>
-                <td>5.69%</td>
-                <td><span class="status active">Active</span></td>
-            </tr>
-            <tr>
-                <td>Brand Awareness</td>
-                <td>412,780</td>
-                <td>15,640</td>
-                <td>3.79%</td>
-                <td><span class="status paused">Paused</span></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+
+    <main>
+        <section class="hero-section" id="home">
+            <h1>Elevate Your Digital Marketing</h1>
+            <p>Data-driven strategies that deliver real results and accelerate your business growth in the digital landscape.</p>
+            <a href="#start" class="cta-button" aria-label="Get Started Now">Get Started Now</a>
+        </section>
+
+        <section class="features-section" id="features">
+            <h2>Our Core Features</h2>
+            <div class="features-container">
+                <article class="feature-item">
+                    <img src="Media/seo.jfif" alt="SEO Optimization illustration" loading="lazy">
+                    <h3>SEO Optimization</h3>
+                    <p>Improve your search rankings with our comprehensive SEO strategies tailored to your business.</p>
+                    <a href="#learn-seo" class="learn-more" aria-label="Learn more about SEO Optimization">Learn More</a>
+                </article>
+                <article class="feature-item">
+                    <img src="Media/pay.png" alt="PPC Campaigns illustration" loading="lazy">
+                    <h3>PPC Campaigns</h3>
+                    <p>Launch targeted ad campaigns that drive qualified traffic and maximize your ROI.</p>
+                    <a href="#learn-ppc" class="learn-more" aria-label="Learn more about PPC Campaigns">Learn More</a>
+                </article>
+                <article class="feature-item">
+                    <img src="Media/content.jfif" alt="Content Strategy illustration" loading="lazy">
+                    <h3>Content Strategy</h3>
+                    <p>Engage your audience with valuable content that builds trust and drives conversions.</p>
+                    <a href="#learn-content" class="learn-more" aria-label="Learn more about Content Strategy">Learn More</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="metrics-section" id="data">
+            <h2>Performance Metrics</h2><br>
+            <h3>Recent Campaign Results</h3>
+            <table class="metrics-table">
+                <thead>
+                    <tr>
+                        <th>Campaign</th>
+                        <th>Impressions</th>
+                        <th>Clicks</th>
+                        <th>CTR</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Summer Sale</td>
+                        <td>245,890</td>
+                        <td>12,450</td>
+                        <td>5.06%</td>
+                        <td><span class="status active" aria-label="Campaign is active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Product Launch</td>
+                        <td>189,340</td>
+                        <td>9,870</td>
+                        <td>5.21%</td>
+                        <td><span class="status completed" aria-label="Campaign is completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>Holiday Special</td>
+                        <td>320,560</td>
+                        <td>18,230</td>
+                        <td>5.69%</td>
+                        <td><span class="status active" aria-label="Campaign is active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Brand Awareness</td>
+                        <td>412,780</td>
+                        <td>15,640</td>
+                        <td>3.79%</td>
+                        <td><span class="status paused" aria-label="Campaign is paused">Paused</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 </body>
 </html>
