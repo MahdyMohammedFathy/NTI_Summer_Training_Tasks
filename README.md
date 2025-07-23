@@ -14,3 +14,5 @@ Day5 : https://tinyurl.com/NTI-ST-Day5
 Day6 : https://tinyurl.com/NTI-ST-Day6
 
 Day7 : https://tinyurl.com/NTI-ST-Day7
+
+Day8 : https://tinyurl.com/NTI-ST-Day8
