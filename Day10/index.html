@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Core Concepts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>JavaScript Core Concepts</h1>
+        <p>Master the fundamentals with interactive examples</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">Variables &amp; Data Types</div>
+            <div class="card-content">
+                <pre>
+let name = "Alex";
+let age = 25;
+let isActive = true;
+                </pre>
+            </div>
+            <div class="card-footer">
+                <button class="button" onclick="handleVariables()">Try It</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Operations</div>
+            <div class="card-content">
+                <pre>
+let num = 5 + 3;
+let isAdult = age >= 18;
+let isValid = true && false;
+                </pre>
+            </div>
+            <div class="card-footer">
+                <button class="button" onclick="handleOperations()">Try It</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Conditions</div>
+            <div class="card-content">
+                <pre>
+if (age >= 18) {
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}
+                </pre>
+            </div>
+            <div class="card-footer">
+                <button class="button" onclick="handleConditions()">Try It</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Loops</div>
+            <div class="card-content">
+                <pre>
+// For loop
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+// While loop
+while (x > 0) {
+    x--;
+}
+                </pre>
+            </div>
+            <div class="card-footer">
+                <button class="button" onclick="handleLoops()">Try It</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Functions</div>
+            <div class="card-content">
+                <pre>
+function greet(name) {
+    return "Hello " + name;
+}
+
+let message = greet("Alice");
+                </pre>
+            </div>
+            <div class="card-footer">
+                <button class="button" onclick="handleFunction()">Try It</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">Day Check (if/else)</div>
+            <div class="card-content">
+                <pre>
+if (day === 1) {
+    console.log("Monday");
+} else if (day === 2) {
+    console.log("Tuesday");
+} else {
+    console.log("Other day");
+}
+                </pre>
+            </div>
+            <div class="card-footer">
+                <button class="button" onclick="handleDayCheck()">Try It</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2023 JavaScript Core Concepts. All rights reserved.
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern DOM Playground</title>
+  <link
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="jumbotron text-center">
+      <h1 class="display-4">Modern DOM Playground</h1>
+      <p class="lead">Interactive exploration of DOM manipulation techniques</p>
+    </div>
+    <div class="row">
+      <!-- Element Creation Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-title">
+            Element Creation <span class="badge">New</span>
+          </div>
+          <div class="card-body">
+            <p>Create and add elements to the DOM with different methods.</p>
+            <button class="btn btn-primary" id="create-div">Create Div</button>
+            <button class="btn btn-info" id="create-text">Create with Text</button>
+            <button class="btn btn-secondary" id="create-html">Create with HTML</button>
+            <button class="btn btn-danger" id="clear-elements">Clear All</button>
+            <div class="border p-2 mt-3" id="creation-result"></div>
+            <p class="instructions"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Element Removal Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-title">Element Removal</div>
+          <div class="card-body">
+            <p>Different ways to remove elements from the DOM.</p>
+            <button class="btn btn-success" id="add-elements">Add Elements</button>
+            <button class="btn btn-danger" id="remove-last">Remove Last</button>
+            <button class="btn btn-danger" id="remove-first">Remove First</button>
+            <button class="btn btn-danger" id="remove-all">Remove All</button>
+            <div class="border p-2 mt-3" id="removal-result"></div>
+            <p class="instructions"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Element Styling Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-title">Element Styling</div>
+          <div class="card-body">
+            <p>Manipulate element styles dynamically.</p>
+            <button class="btn btn-primary" id="inline-style">Inline Style</button>
+            <button class="btn btn-info" id="toggle-style-class">Toggle Class</button> <!-- ✅ UNIQUE ID -->
+            <button class="btn btn-secondary" id="get-computed">Get Computed</button>
+            <button class="btn btn-danger" id="reset-styles">Reset Styles</button>
+            <div class="border p-2 mt-3" id="style-result">
+              This element will be styled in different ways
+            </div>
+            <p class="instructions"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Attributes Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-title">Attributes</div>
+          <div class="card-body">
+            <p>Work with element attributes and data-* attributes.</p>
+            <button class="btn btn-primary" id="set-attributes">Set Attributes</button>
+            <button class="btn btn-info" id="get-attributes">Get Attributes</button>
+            <button class="btn btn-secondary" id="data-attributes">Data Attributes</button>
+            <button class="btn btn-danger" id="remove-attributes">Remove Attributes</button>
+            <div class="border p-2 mt-3 con" id="attributes-result">
+              <div>Attribute Demo Element</div>
+              <input type="text" placeholder="Test input field" />
+            </div>
+            <p class="instructions"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Manipulation Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-title">Content Manipulation</div>
+          <div class="card-body">
+            <p>Different methods for changing element content.</p>
+            <button class="btn btn-primary" id="inner-html">innerHTML</button>
+            <button class="btn btn-info" id="text-content">textContent</button>
+            <button class="btn btn-secondary" id="insert-adjacent-html">
+              insertAdjacentHTML
+            </button>
+            <button class="btn btn-danger" id="reset-content">Reset Content</button>
+            <div class="border p-2 mt-3 con" id="content-result">
+              Original content
+            </div>
+            <p class="instructions"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Handling Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-title">Event Handling</div>
+          <div class="card-body">
+            <p>Add and remove event listeners dynamically.</p>
+            <button class="btn btn-primary" id="add-events">Add Events</button>
+            <button class="btn btn-danger" id="remove-events">Remove Events</button>
+            <div class="border p-2 mt-3 con" id="event-result">Interact with me</div>
+            <p class="instructions"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DOM Traversal Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-title">DOM Traversal</div>
+          <div class="card-body">
+            <p>Navigate through the DOM tree structure.</p>
+            <button class="btn btn-primary" id="find-parent">Parent</button>
+            <button class="btn btn-info" id="find-children">Children</button>
+            <button class="btn btn-secondary" id="find-sibling">Sibling</button>
+            <button class="btn btn-danger" id="query-grandchild">Query</button>
+            <div class="border p-2 mt-3" id="traversal-result">
+              <div>
+                Root Element
+                <div style="padding: 10px">
+                  Child 1
+                  <div>Grandchild</div>
+                </div>
+                <div id="target">Child 2 (Target)</div>
+                <div>Child 3</div>
+              </div>
+            </div>
+            <p class="instructions"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animation Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-title">Animation</div>
+          <div class="card-body">
+            <p>Animate elements using JavaScript.</p>
+            <button class="btn btn-primary" id="move">Move</button>
+            <button class="btn btn-info" id="change-color">Color</button>
+            <button class="btn btn-secondary" id="transform">Transform</button>
+            <button class="btn btn-danger" id="stop-animation">Stop</button>
+            <div id="animation-area">
+              <div id="animated-box"></div>
+            </div>
+            <p class="instructions"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Class Manipulation Card -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-title">Class Manipulation</div>
+          <div class="card-body">
+            <p>Work with CSS classes dynamically.</p>
+            <button class="btn btn-primary" id="add-class">Add Class</button>
+            <button class="btn btn-info" id="remove-class">Remove Class</button>
+            <button class="btn btn-secondary" id="toggle-class">Toggle Class</button> <!-- ✅ OK -->
+            <button class="btn btn-danger" id="check-class">Check Class</button>
+            <button class="btn btn-danger" id="replace-class">Replace Class</button>
+            <div class="border p-2 mt-3 con" id="class-target">Class Target Element</div>
+            <p class="instructions"></p>
+          </div>
+        </div>
+      </div>
+      <!-- Form Manipulation Card -->
+        <div class="col-md-4">
+        <div class="card">
+            <div class="card-title">Form Manipulation</div>
+            <div class="card-body">
+            <p>Work with form elements and values.</p>
+            <input type="text" class="form-control mb-2" id="form-name" placeholder="Your name" />
+            <select class="form-control mb-2" id="form-color">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+            </select>
+            <div class="form-check mb-2">
+                <input type="checkbox" class="form-check-input" id="form-subscribe" />
+                <label class="form-check-label" for="form-subscribe">Subscribe to newsletter</label>
+            </div>
+            <button class="btn btn-primary" id="fill-form">Fill Form</button>
+            <button class="btn btn-info" id="get-values">Get Values</button>
+            <button class="btn btn-secondary" id="reset-form">Reset Form</button>
+            <p id="form-result" class="instructions mt-2"></p>
+            </div>
+        </div>
+        </div>
+
+        <!-- Local Storage Card -->
+        <div class="col-md-4">
+        <div class="card">
+            <div class="card-title">Local Storage</div>
+            <div class="card-body">
+            <p>Store and retrieve data from browser's local storage.</p>
+            <input type="text" class="form-control mb-2" id="storage-input" placeholder="Enter data to store" />
+            <button class="btn btn-primary" id="set-item">Set Item</button>
+            <button class="btn btn-info" id="get-item">Get Item</button>
+            <button class="btn btn-secondary" id="store-object">Store Object</button>
+            <button class="btn btn-danger" id="clear-storage">Clear Storage</button>
+            <p id="storage-result" class="instructions mt-2"></p>
+            </div>
+        </div>
+        </div>
+
+        <!-- Advanced DOM Card -->
+        <div class="col-md-4">
+        <div class="card">
+            <div class="card-title">Advanced DOM</div>
+            <div class="card-body">
+            <p>Advanced DOM manipulation techniques.</p>
+            <button class="btn btn-primary" id="clone-element">Clone Element</button>
+            <button class="btn btn-info" id="debounce">Debounce</button>
+            <button class="btn btn-secondary" id="templates">Templates</button>
+            <button class="btn btn-danger" id="observer">Observer</button>
+            <div class="border p-2 mt-3" id="advanced-result">
+                Original Element (Click to change color)
+            </div>
+            <p id="pp-result" class="instructions mt-2"></p>
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

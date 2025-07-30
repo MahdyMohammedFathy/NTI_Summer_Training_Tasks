@@ -1,0 +1,163 @@
+body {
+  background-color: #eef1f5;
+}
+
+.jumbotron {
+  background: linear-gradient(135deg, #377DFF, #7C5FFF);
+  color: white;
+  border-radius: 10px;
+}
+
+.card {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.card-title {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+}
+
+.card-title span {
+  background-color: #7C5FFF;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+}
+
+.card-body {
+  background-color: #f8fafc;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+}
+
+.btn {
+  margin-top: 5px;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.btn-info {
+  background-color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+.btn-secondary {
+  background-color: #6b7280;
+  border-color: #6b7280;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  border-color: #ef4444;
+}
+
+#creation-result,
+#removal-result,
+#style-result,
+#content-result,
+#traversal-result {
+  min-height: 50px;
+  background-color: #f9fafb;
+  border-radius: 5px;
+  border: 1px dashed #cbd5e1;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.list-item,
+.removable-item {
+  background-color: #97e4ad;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 3px;
+  border: 1px solid #cbd5e1;
+}
+
+.removable-item {
+  color: #333;
+  font-weight: bold;
+}
+
+.instructions {
+  color: #333;
+  background-color: #f9fafb;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 3px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.9em;
+}
+
+#content-result {
+  line-height: 1.5;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.new-class {
+  background-color: lightgreen;
+}
+
+#traversal-result div {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+
+#traversal-result div div {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid #e5e7eb;
+  border-radius: 3px;
+  background-color: #f0f3f5;
+}
+
+#target {
+  font-weight: bold;
+  background-color: #e0e7ff;
+}
+
+#animation-area {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  border: 1px dashed #ccc;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+#animated-box {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: hotpink;
+  top: 0;
+  left: 0;
+  transition: top 0.05s linear, left 0.05s linear;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
